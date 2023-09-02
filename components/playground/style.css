@@ -1,0 +1,31 @@
+.playground {
+    width: var(--playground-size);
+    height: var(--playground-size);
+
+    background-color: rgb(187, 173, 160);
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-columns: repeat(var(--game-size), calc((100%) / var(--game-size)));
+    grid-template-rows: repeat(var(--game-size), calc((100%) / var(--game-size)));
+
+    margin: auto auto;
+    padding: 0 var(--tile-gap) var(--tile-gap) 0;
+
+    position: relative;
+}
+
+
+.playground.game-over {
+    filter: blur(3px);
+}
+
+.game-over-text {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    text-shadow: 0px 0px 5px grey;
+}
